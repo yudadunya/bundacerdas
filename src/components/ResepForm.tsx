@@ -108,10 +108,19 @@ export default function ResepForm() {
         minHeight: 480,
       }}
     >
+      {/* Header WhatsApp style */}
+      <div className="flex items-center gap-3 px-4 py-3 flex-shrink-0" style={{ background: "#075e54" }}>
+        <div className="w-10 h-10 rounded-full flex items-center justify-center text-xl flex-shrink-0" style={{ background: "#25d366" }}>🍳</div>
+        <div>
+          <p className="font-semibold text-white text-sm leading-tight">BundaCerdas</p>
+          <p className="text-xs" style={{ color: "#b2dfdb" }}>Teman ngobrol masak sehari-hari</p>
+        </div>
+      </div>
+
       {/* Messages */}
       <div
         className="flex-1 overflow-y-auto px-3 py-3 flex flex-col gap-2"
-        style={{ height: 430, maxHeight: 430 }}
+        style={{ height: 380, maxHeight: 380 }}
       >
         {messages.map((msg, i) => {
           if (msg.type === "typing") {
