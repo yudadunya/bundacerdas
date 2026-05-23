@@ -58,9 +58,9 @@ export default function DashboardPage() {
         <div className="flex items-start gap-4">
           <span className="text-5xl">🍳</span>
           <div>
-            <h2 className="font-display text-xl mb-1">Mau Masak Apa?</h2>
+            <h2 className="font-display text-xl mb-1">Apa Kabar?</h2>
             <p className="text-brand-100 text-sm leading-relaxed">
-              Ceritakan bahan-bahan yang ada di dapur Bunda, nanti AI kasih ide resep hemat & praktis!
+              Silakan Chat aja ya!
             </p>
           </div>
         </div>
