@@ -53,19 +53,6 @@ export default function DashboardPage() {
         </div>
       </header>
 
-      {/* Hero card */}
-      <div className="card bg-gradient-to-br from-brand-500 to-brand-600 text-white mb-6 border-0">
-        <div className="flex items-start gap-4">
-          <span className="text-5xl">🍳</span>
-          <div>
-            <h2 className="font-display text-xl mb-1">Apa Kabar?</h2>
-            <p className="text-brand-100 text-sm leading-relaxed">
-              Silakan Chat aja ya!
-            </p>
-          </div>
-        </div>
-      </div>
-
       {/* Main feature */}
       <ResepForm />
     </main>
