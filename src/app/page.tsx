@@ -43,8 +43,11 @@ export default function HomePage() {
         <h1 className="font-display text-4xl text-brand-700 mb-2 leading-tight">
           BundaCerdas
         </h1>
-        <p className="text-brand-500 font-semibold text-sm tracking-widest uppercase mb-6">
-          Teman Pintar Ibu Rumah Tangga
+        <p className="text-brand-500 font-semibold text-sm tracking-widest uppercase mb-2">
+          BundaCerdas
+        </p>
+        <p className="text-gray-500 text-sm mb-6">
+          Teman ngobrol masak sehari-hari 🥘
         </p>
 
         <p className="text-gray-600 mb-10 leading-relaxed">
