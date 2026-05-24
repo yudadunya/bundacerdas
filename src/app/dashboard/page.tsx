@@ -19,42 +19,27 @@ export default function DashboardPage() {
     });
   }, []);
 
-  async function logout() {
-    await supabase.auth.signOut();
-    router.replace("/");
-  }
-
   if (!user) return null;
 
   const nama = user.user_metadata?.full_name?.split(" ")[0] ?? "Bunda";
   const avatar = user.user_metadata?.avatar_url;
 
   return (
-    <main className="min-h-screen px-4 py-8 max-w-xl mx-auto">
-      {/* Header */}
-      <header className="flex items-center justify-between mb-8">
-        <div>
-          <p className="text-gray-500 text-sm">Selamat datang,</p>
-          <h1 className="font-display text-2xl text-brand-700">
-            {nama} 👋
-          </h1>
-        </div>
-        <div className="flex items-center gap-3">
-          {avatar && (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={avatar} alt={nama} className="w-9 h-9 rounded-full ring-2 ring-brand-200" />
-          )}
-          <button
-            onClick={logout}
-            className="text-sm text-gray-400 hover:text-brand-600 transition-colors"
-          >
-            Keluar
-          </button>
-        </div>
-      </header>
-
-      {/* Main feature */}
-      <ResepForm />
+    <main style={{
+      height: "100dvh",
+      display: "flex",
+      flexDirection: "column",
+      overflow: "hidden",
+      background: "#e5ddd5",
+    }}>
+      <ResepForm
+        userName={nama}
+        userAvatar={avatar}
+        onLogout={async () => {
+          await supabase.auth.signOut();
+          router.replace("/");
+        }}
+      />
     </main>
   );
 }
